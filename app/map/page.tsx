@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import ThemeToggle from "../../components/ThemeToggle";
+import Navigation from "../../components/Navigation";
 import type { InventoryItem } from "../../data/inventory";
 import { initialInventory } from "../../data/inventory";
 import { loadInventory } from "../../lib/storage";
@@ -47,30 +46,9 @@ export default function MapPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-zinc-50 text-zinc-900 dark:from-black dark:to-zinc-950 dark:text-zinc-50">
-      <header className="sticky top-0 z-10 border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-zinc-900 p-1.5 text-white dark:bg-zinc-800">
-              <Image src="/logo.svg" alt="Bike Accessories Logo" width={24} height={24} className="h-full w-full" />
-            </div>
-            <div className="text-sm font-semibold">Bike Accessories</div>
-          </Link>
-          <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Dashboard
-            </Link>
-            <Link href="/map" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Store Map
-            </Link>
-            <Link href="/admin" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Admin
-            </Link>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </header>
+      <Navigation />
 
-      <main className="mx-auto max-w-6xl px-5 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">In‑Store Placement</h1>
@@ -310,6 +288,10 @@ export default function MapPage() {
           </section>
         </div>
       </main>
+
+      <footer className="mx-auto mt-16 max-w-7xl border-t border-black/5 px-4 py-6 text-xs text-zinc-500 dark:border-white/10 dark:text-zinc-400 sm:px-6 lg:px-8">
+        © {new Date().getFullYear()} Bike Accessories — Quality bike accessories for every rider.
+      </footer>
     </div>
   );
 }

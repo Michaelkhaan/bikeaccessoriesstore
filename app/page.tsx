@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import DashboardStats from "../components/DashboardStats";
 import InventoryCard from "../components/InventoryCard";
-import ThemeToggle from "../components/ThemeToggle";
+import Navigation from "../components/Navigation";
 import { initialInventory, type InventoryItem } from "../data/inventory";
 import { loadInventory, restock, sellOne } from "../lib/storage";
 
@@ -18,11 +17,6 @@ export default function Home() {
   useEffect(() => {
     setItems(loadInventory());
   }, []);
-
-  const headerRevenue = useMemo(
-    () => items.reduce((s, i) => s + i.sold * i.price, 0),
-    [items]
-  );
 
   // Calculate pagination
   const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -39,33 +33,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-zinc-50 text-zinc-900 dark:from-black dark:to-zinc-950 dark:text-zinc-50">
-      <header className="sticky top-0 z-10 border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-zinc-900 p-1.5 text-white dark:bg-zinc-800">
-              <Image src="/logo.svg" alt="Bike Accessories Logo" width={24} height={24} className="h-full w-full" />
-            </div>
-            <div className="text-sm font-semibold">Bike Accessories</div>
-          </Link>
-          <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Dashboard
-            </Link>
-            <Link href="/map" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Store Map
-            </Link>
-            <Link href="/admin" className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-              Admin
-            </Link>
-            <ThemeToggle />
-            <div className="ml-2 rounded-full bg-zinc-900 px-3 py-1 text-xs text-white dark:bg-white dark:text-black">
-              Rev ${headerRevenue.toFixed(2)}
-            </div>
-          </nav>
-        </div>
-      </header>
+      <Navigation />
 
-      <main className="mx-auto max-w-6xl px-5 py-8">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <section className="mb-8">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div>
@@ -138,8 +108,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="mx-auto mt-10 max-w-6xl border-t border-black/5 px-5 py-6 text-xs text-zinc-500 dark:border-white/10 dark:text-zinc-400">
-        © {new Date().getFullYear()} Bike Accessories — Simple modern store dashboard.
+      <footer className="mx-auto mt-16 max-w-7xl border-t border-black/5 px-4 py-6 text-xs text-zinc-500 dark:border-white/10 dark:text-zinc-400 sm:px-6 lg:px-8">
+        © {new Date().getFullYear()} Bike Accessories — Quality bike accessories for every rider.
       </footer>
     </div>
   );
