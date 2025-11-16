@@ -8,6 +8,7 @@ import ProductForm from "../../components/ProductForm";
 import type { InventoryItem } from "../../data/inventory";
 import { initialInventory } from "../../data/inventory";
 import { addProduct, deleteProduct, loadInventory, updateProduct } from "../../lib/storage";
+import Image from "next/image";
 
 export default function AdminPage() {
   const [items, setItems] = useState<InventoryItem[]>(initialInventory);

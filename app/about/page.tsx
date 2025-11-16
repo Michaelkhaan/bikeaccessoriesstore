@@ -20,9 +20,7 @@ export default function AboutPage() {
           <section className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-zinc-900">
             <h2 className="mb-4 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Our Mission</h2>
             <p className="text-zinc-600 dark:text-zinc-400">
-              At Bike Accessories, we're passionate about cycling and committed to providing riders with the highest quality
-              accessories to enhance their cycling experience. Whether you're a casual rider or a professional cyclist, we
-              have everything you need to stay safe, comfortable, and prepared on every ride.
+              {"At Bike Accessories, we're passionate about cycling and committed to providing riders with the highest quality accessories to enhance their cycling experience. Whether you're a casual rider or a professional cyclist, we have everything you need to stay safe, comfortable, and prepared on every ride."}
             </p>
           </section>
 
@@ -50,7 +48,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-50">Customer Focus</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Your satisfaction is our priority. We're here to help you find the perfect accessories for your needs.
+                  {"Your satisfaction is our priority. We're here to help you find the perfect accessories for your needs."}
                 </p>
               </div>
 
@@ -74,7 +72,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-zinc-900 dark:text-zinc-50">Sustainability</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  We're committed to environmental responsibility and sustainable business practices.
+                  {"We're committed to environmental responsibility and sustainable business practices."}
                 </p>
               </div>
             </div>
@@ -94,9 +92,7 @@ export default function AboutPage() {
                 common love for cycling. We understand the needs of riders because we are riders ourselves.
               </p>
               <p>
-                Today, we're proud to offer a comprehensive selection of bike accessories, from safety equipment like helmets
-                and lights to convenience items like locks and water bottles. Every product in our inventory is carefully
-                selected and tested to meet our high standards.
+                {"Today, we're proud to offer a comprehensive selection of bike accessories, from safety equipment like helmets and lights to convenience items like locks and water bottles. Every product in our inventory is carefully selected and tested to meet our high standards."}
               </p>
             </div>
           </section>

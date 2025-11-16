@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Contact Us</h1>
           <p className="text-lg text-zinc-600 dark:text-zinc-400">
-            We'd love to hear from you. Get in touch with us!
+            {"We'd love to hear from you. Get in touch with us!"}
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-zinc-900">
               {submitted && (
                 <div className="mb-6 rounded-xl bg-green-50 p-4 text-sm text-green-800 dark:bg-green-950 dark:text-green-200">
-                  Thank you for your message! We'll get back to you soon.
+                  {"Thank you for your message! We'll get back to you soon."}
                 </div>
               )}
 

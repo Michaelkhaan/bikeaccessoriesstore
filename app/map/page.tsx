@@ -7,6 +7,7 @@ import Navigation from "../../components/Navigation";
 import type { InventoryItem } from "../../data/inventory";
 import { initialInventory } from "../../data/inventory";
 import { loadInventory } from "../../lib/storage";
+import Image from "next/image";
 
 export default function MapPage() {
   const [items, setItems] = useState<InventoryItem[]>(initialInventory);

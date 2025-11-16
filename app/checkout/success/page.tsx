@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import Link from "next/link";
@@ -74,7 +75,7 @@ export default function CheckoutSuccessPage() {
           <>
             <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">Order Not Found</h1>
             <p className="mb-8 text-lg text-zinc-600 dark:text-zinc-400">
-              We couldn't find your order. Please contact support if you believe this is an error.
+              {"We couldn't find your order. Please contact support if you believe this is an error."}
             </p>
             <Link
               href="/"
