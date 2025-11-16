@@ -85,11 +85,11 @@ export default function Navigation() {
             )}
           </Link> */}
           
-          {pathname === "/" && (
+          {/* {pathname === "/" && (
             <div className="hidden rounded-full bg-zinc-900 px-3 py-1 text-xs text-white dark:bg-white dark:text-black sm:block">
               Rev ${revenue.toFixed(2)}
             </div>
-          )}
+          )} */}
           
           <ThemeToggle />
           
