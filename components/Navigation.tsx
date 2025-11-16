@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import Image from "next/image";
@@ -36,7 +37,6 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "/", label: "Dashboard" },
-    { href: "/products", label: "Products" },
     { href: "/map", label: "Store Map" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
@@ -70,7 +70,7 @@ export default function Navigation() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
+          {/* <Link
             href="/cart"
             className="relative rounded-lg p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800"
             aria-label="Shopping cart"
@@ -83,7 +83,7 @@ export default function Navigation() {
                 {cartCount > 9 ? "9+" : cartCount}
               </span>
             )}
-          </Link>
+          </Link> */}
           
           {pathname === "/" && (
             <div className="hidden rounded-full bg-zinc-900 px-3 py-1 text-xs text-white dark:bg-white dark:text-black sm:block">
@@ -138,7 +138,7 @@ function MobileMenu({ navLinks, isActive, cartCount }: { navLinks: Array<{ href:
                   {link.label}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 href="/cart"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
@@ -149,7 +149,7 @@ function MobileMenu({ navLinks, isActive, cartCount }: { navLinks: Array<{ href:
                     {cartCount > 9 ? "9+" : cartCount}
                   </span>
                 )}
-              </Link>
+              </Link> */}
             </div>
           </nav>
         </div>
