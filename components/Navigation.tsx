@@ -38,8 +38,6 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Dashboard" },
     { href: "/map", label: "Store Map" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
     { href: "/admin", label: "Admin" },
   ];
 
