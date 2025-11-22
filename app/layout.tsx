@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ThemeScript from "@/components/ThemeScript";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,25 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  const initialTheme = theme || systemTheme;
-                  const root = document.documentElement;
-                  if (initialTheme === 'dark') {
-                    root.classList.add('dark');
-                  } else {
-                    root.classList.remove('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
+        <ThemeScript />
         {children}
       </body>
     </html>

@@ -75,7 +75,7 @@ export default function AdminPage() {
 
         {/* Products Section */}
         <div>
-            <div className="mb-6 flex items-center justify-between">
+            <div className="mb-6 flex flex-wrap items-center justify-between">
               <div>
                 <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">Products Management</h2>
                 <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
@@ -85,7 +85,7 @@ export default function AdminPage() {
               {!isAdding && !editingId && (
                 <button
                   onClick={() => setIsAdding(true)}
-                  className="flex items-center gap-2 rounded-xl bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-100"
+                  className="flex mt-4 sm:mt-0 items-center gap-2 rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-100"
                 >
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />

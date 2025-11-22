@@ -50,14 +50,14 @@ export default function MapPage() {
       <Navigation />
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6 flex flex-wrap items-center justify-between">
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">In‑Store Placement</h1>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Search and locate any item in the store layout.</p>
           </div>
           <Link
             href="/"
-            className="rounded-xl border border-black/5 px-4 py-2 text-sm font-medium shadow-sm hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+            className="rounded-lg border border-black/5 px-4 py-2 text-sm font-medium shadow-sm hover:bg-zinc-50 dark:border-white/10 dark:bg-zinc-900 dark:hover:bg-zinc-800"
           >
             Back to Dashboard
           </Link>
