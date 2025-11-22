@@ -13,7 +13,7 @@ export default function DashboardStats({ items }: Props) {
     { label: "Products", value: totals.totalProducts.toLocaleString(), sub: "Variants tracked" },
     { label: "In Stock", value: totals.totalUnitsInStock.toLocaleString(), sub: "Units available" },
     { label: "Sold", value: totals.totalUnitsSold.toLocaleString(), sub: "Units sold" },
-    { label: "Revenue", value: `$${totals.revenue.toFixed(2)}`, sub: "All-time" },
+    { label: "Revenue", value: `Rs.${totals.revenue.toFixed(2)}`, sub: "All-time" },
   ];
 
   return (

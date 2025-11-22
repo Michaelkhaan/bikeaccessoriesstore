@@ -34,7 +34,7 @@ export default function InventoryCard({ item, onSell, onRestock }: Props) {
           <div className="mt-1 grid grid-cols-3 gap-3 text-sm text-zinc-600 dark:text-zinc-300">
             <div>
               <div className="text-xs text-zinc-500 dark:text-zinc-400">Price</div>
-              <div className="font-medium">${item.price.toFixed(2)}</div>
+              <div className="font-medium">Rs.{item.price.toFixed(2)}</div>
             </div>
             <div>
               <div className="text-xs text-zinc-500 dark:text-zinc-400">In Stock</div>
